@@ -57,8 +57,8 @@ public class jobTitleParser {
 			text = text.substring(titleStart).split("\\r?\\n")[0];
 		}
 		else {
-			System.out.println("No Job Title Found");
-			text = "";
+			//System.out.println("No Job Title Found");
+			text = "No Job Title Found";
 		}
 		return text;
 	}
@@ -147,7 +147,7 @@ public class jobTitleParser {
 					 System.out.println("Parse Test: " + i + " " + catchList.get(i));
 				 }
 				 System.out.println("Start of Parse Title Test ");
-				 //System.out.println("Test of text with title :" + getJobTitle(testTextWithJob));
+				 System.out.println("Test of text with title :" + getJobTitle(testTextWithJob));
 				 System.out.println("Test of text without title :" + getJobTitle(testTextWithoutJob));
 				 System.out.println("Start of new line suppression test");
 				 String lines = getRidOfExtraNewLines(testTextWithJob);
