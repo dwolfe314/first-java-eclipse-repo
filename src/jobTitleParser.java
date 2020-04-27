@@ -57,7 +57,7 @@ public class jobTitleParser {
 			text = text.substring(titleStart).split("\\r?\\n")[0];
 		}
 		else {
-			System.out.println("No Job Title Could Be Found");
+			System.out.println("No Job Title Found");
 			text = "";
 		}
 		return text;
