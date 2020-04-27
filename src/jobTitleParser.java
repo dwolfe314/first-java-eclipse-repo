@@ -120,6 +120,7 @@ public class jobTitleParser {
 	}
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
+		
 		String jobTitle = "Wine Sales Consultant, Mtns-Aspen/Snowma";
 		String[] titleParts = jobTitle.split(" ");
 		for (int i = 0; i < titleParts.length; i++)
@@ -129,8 +130,13 @@ public class jobTitleParser {
 		String test = "Dir";
 		String testLower = test.toLowerCase();
 		String jobTitleLower = jobTitle.toLowerCase();
-		String fileName = "C:\\Test\\position_cnt_SGWS_COM.txt";
+		String inFileName = "C:\\Test\\position_cnt_SGWS_COM.txt";
 		String outFileName = "C:\\Test\\position_cnt_SGWS_COM.csv";
+		
+		if (args.length > 1) {
+			inFileName = args[0];
+			outFileName = args[1];
+		}
 		try {	
 			 try {
 				 String testText = "Service: Onboarding | Service Option: Create an Active Directory Account | Role: Sales";
@@ -151,7 +157,7 @@ public class jobTitleParser {
 				 
 			 }
 			 
-			List<String> lines = Files.readAllLines(Paths.get(fileName));
+			List<String> lines = Files.readAllLines(Paths.get(inFileName));
 		
 			//System.out.println(lines.get(5));
 			//***************************************************************************
@@ -234,7 +240,7 @@ public class jobTitleParser {
 				System.out.println(e.toString());			
 			}
 		} catch (IOException e) {
-			System.out.println("Input file open failure for: " + fileName);
+			System.out.println("Input file open failure for: " + inFileName);
 			System.out.println(e.toString());
 			//e.printStackTrace();
 		}
