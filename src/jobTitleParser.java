@@ -141,7 +141,7 @@ public class jobTitleParser {
 					 System.out.println("Parse Test: " + i + " " + catchList.get(i));
 				 }
 				 System.out.println("Start of Parse Title Test ");
-				 System.out.println("Test of text with title :" + getJobTitle(testTextWithJob));
+				 //System.out.println("Test of text with title :" + getJobTitle(testTextWithJob));
 				 System.out.println("Test of text without title :" + getJobTitle(testTextWithoutJob));
 				 System.out.println("Start of new line suppression test");
 				 String lines = getRidOfExtraNewLines(testTextWithJob);
