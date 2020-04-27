@@ -58,7 +58,7 @@ public class jobTitleParser {
 		}
 		else {
 			//System.out.println("No Job Title Found");
-			text = "No Job Title Found";
+			text = "No Job Title Could Be Found";
 		}
 		return text;
 	}
